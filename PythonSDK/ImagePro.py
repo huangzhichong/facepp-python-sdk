@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import base64
 import io
 import os
@@ -119,7 +121,3 @@ class ImageProCls:
         file.write(imgdata)
         file.close()
         print('结果已经生成，生成文件名：MergeResultImg.jpg，请在imgResource/目录下查看')
-
-
-
-

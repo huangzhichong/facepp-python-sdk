@@ -26,8 +26,8 @@ __all__ = ['File', 'APIError', 'API']
 DEBUG_LEVEL = 1
 
 # 添加API Key API Secret
-API_KEY = "XXX"
-API_SECRET = "XXX"
+API_KEY = "JmAt_nHedits2YFaYl9I8Ls8k6aLgfiK"
+API_SECRET = "PH8xnCcvP2XNcz-1em8TH8vJcFTX275h"
 
 
 class File(object):

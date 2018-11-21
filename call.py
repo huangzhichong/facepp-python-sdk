@@ -69,13 +69,13 @@ print_result('search', search_result)
 # -----------------------------------------------------------人体识别部分-------------------------------------------
 
 # 人体抠像:https://console.faceplusplus.com.cn/documents/10071567
-# segment_res = api.segment(image_file=File(segment_img))
-# f = open('./imgResource/demo-segment.b64', 'w')
-# f.write(segment_res["result"])
-# f.close()
-# print_result("segment", segment_res)
+segment_res = api.segment(image_file=File(segment_img))
+f = open('./imgResource/demo-segment.b64', 'w')
+f.write(segment_res["result"])
+f.close()
+print_result("segment", segment_res)
 # # 开始抠像
-# PythonSDK.ImagePro.ImageProCls.getSegmentImg("./imgResource/demo-segment.b64")
+PythonSDK.ImagePro.ImageProCls.getSegmentImg("./imgResource/demo-segment.b64")
 
 # -----------------------------------------------------------证件识别部分-------------------------------------------
 # 身份证识别:https://console.faceplusplus.com.cn/documents/5671702

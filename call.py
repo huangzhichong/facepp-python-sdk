@@ -46,25 +46,25 @@ print_result(printFuctionTitle("人脸检测"), res)
 # 3，开始搜索
 
 # 删除无用的人脸库，这里删除了，如果在项目中请注意是否要删除
-# api.faceset.delete(outer_id='faceplusplus', check_empty=0)
+api.faceset.delete(outer_id='faceplusplus', check_empty=0)
 # # 1.创建一个faceSet
-# ret = api.faceset.create(outer_id='faceplusplus')
+ret = api.faceset.create(outer_id='faceplusplus')
 #
 # # 2.向faceSet中添加人脸信息(face_token)
-# faceResStr=""
-# res = api.detect(image_file=File(faceSet_img))
-# faceList = res["faces"]
-# for index in range(len(faceList)):
-#     if(index==0):
-#         faceResStr = faceResStr + faceList[index]["face_token"]
-#     else:
-#         faceResStr = faceResStr + ","+faceList[index]["face_token"]
+faceResStr=""
+res = api.detect(image_file=File(faceSet_img))
+faceList = res["faces"]
+for index in range(len(faceList)):
+    if(index==0):
+        faceResStr = faceResStr + faceList[index]["face_token"]
+    else:
+        faceResStr = faceResStr + ","+faceList[index]["face_token"]
 #
-# api.faceset.addface(outer_id='faceplusplus', face_tokens=faceResStr)
+api.faceset.addface(outer_id='faceplusplus', face_tokens=faceResStr)
 #
 # # 3.开始搜索相似脸人脸信息
-# search_result = api.search(image_file=File(face_search_img), outer_id='faceplusplus')
-# print_result('search', search_result)
+search_result = api.search(image_file=File(face_search_img), outer_id='faceplusplus')
+print_result('search', search_result)
 
 # -----------------------------------------------------------人体识别部分-------------------------------------------
 
